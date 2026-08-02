@@ -1,0 +1,613 @@
+
+html = r"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Invitation Link Generator &#8212; Jacob Israel &amp; Dhivya Holy Matrimony</title>
+  <meta name="description" content="Generate personalised invitation links for Jacob Israel &amp; Dhivya's Holy Matrimony on 4th September 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --navy-deep:  #060E24;
+      --navy-core:  #0D1B3E;
+      --navy-mid:   #152347;
+      --navy-light: #1E3060;
+      --gold-core:  #C9A84C;
+      --gold-light: #E8CC88;
+      --gold-pale:  #F5E4B8;
+      --ivory:      #FAF7F0;
+      --text-dim:   rgba(250,247,240,0.60);
+      --text-mid:   rgba(250,247,240,0.80);
+      --border:     rgba(201,168,76,0.25);
+      --border-b:   rgba(201,168,76,0.55);
+      --glass:      rgba(13,27,62,0.55);
+      --radius:     12px;
+      --transition: 0.32s cubic-bezier(0.4,0,0.2,1);
+    }
+    *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+    html{ scroll-behavior:smooth; }
+    ::-webkit-scrollbar{ width:5px; }
+    ::-webkit-scrollbar-track{ background:var(--navy-deep); }
+    ::-webkit-scrollbar-thumb{ background:var(--gold-core); border-radius:3px; }
+    body{
+      font-family:'Cormorant Garamond',serif;
+      background:var(--navy-deep); color:var(--ivory);
+      min-height:100vh; overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+    }
+    #bgCanvas{ position:fixed; inset:0; width:100%; height:100%; pointer-events:none; z-index:0; }
+
+    /* ─── LAYOUT ─── */
+    .wrapper{
+      position:relative; z-index:1;
+      max-width:1200px; margin:0 auto;
+      padding:clamp(32px,6vw,80px) clamp(20px,6vw,80px) 80px;
+    }
+
+    /* ─── HEADER ─── */
+    .page-header{
+      text-align:center; margin-bottom:clamp(40px,6vw,72px);
+      padding-bottom:clamp(28px,4vw,48px);
+      border-bottom:1px solid var(--border);
+      position:relative;
+    }
+    .page-header .cross{
+      font-size:clamp(2rem,4vw,3rem); color:var(--gold-core);
+      display:block; margin-bottom:16px;
+      filter:drop-shadow(0 0 24px rgba(201,168,76,0.8));
+      animation:glow 3.5s ease-in-out infinite;
+    }
+    @keyframes glow{
+      0%,100%{ filter:drop-shadow(0 0 20px rgba(201,168,76,0.7)); }
+      50%{ filter:drop-shadow(0 0 45px rgba(201,168,76,1.0)); }
+    }
+    .page-header .eyebrow{
+      font-family:'Cinzel',serif; font-size:.62rem; letter-spacing:6px;
+      text-transform:uppercase; color:var(--gold-core); font-weight:700;
+      display:block; margin-bottom:12px;
+    }
+    .page-header h1{
+      font-family:'Great Vibes',cursive;
+      font-size:clamp(2.6rem,6vw,4.5rem);
+      color:var(--ivory); font-weight:normal; line-height:1.1; margin-bottom:8px;
+    }
+    .page-header .sub{
+      font-family:'Cinzel',serif; font-size:.68rem; letter-spacing:4px;
+      color:var(--text-dim); text-transform:uppercase; margin-bottom:10px;
+    }
+    .page-header .date-tag{
+      display:inline-block; font-family:'Cinzel',serif; font-size:.62rem;
+      letter-spacing:3px; text-transform:uppercase; font-weight:700;
+      background:var(--gold-core); color:var(--navy-deep); border-radius:50px;
+      padding:6px 22px; margin-top:10px;
+    }
+    .header-rule{
+      width:120px; height:1px; margin:18px auto 0;
+      background:linear-gradient(90deg,transparent,var(--gold-core),transparent);
+    }
+
+    /* ─── HOW IT WORKS ─── */
+    .how-grid{
+      display:grid; grid-template-columns:repeat(3,1fr);
+      gap:18px; margin-bottom:clamp(36px,5vw,56px);
+    }
+    @media(max-width:640px){ .how-grid{ grid-template-columns:1fr; } }
+    .how-card{
+      background:var(--glass);
+      border:1px solid var(--border); border-radius:var(--radius);
+      padding:24px 20px; text-align:center;
+      backdrop-filter:blur(8px);
+      transition:border-color var(--transition), transform var(--transition);
+    }
+    .how-card:hover{ border-color:var(--border-b); transform:translateY(-3px); }
+    .how-card::before{
+      content:''; display:block; height:2px;
+      background:linear-gradient(90deg,transparent,var(--gold-core),transparent);
+      margin:-24px -20px 20px;
+    }
+    .how-num{
+      font-family:'Cinzel Decorative',serif; font-size:2rem;
+      color:var(--gold-core); opacity:.45; margin-bottom:8px;
+    }
+    .how-title{
+      font-family:'Cinzel',serif; font-size:.62rem; letter-spacing:3px;
+      text-transform:uppercase; color:var(--gold-light); font-weight:700; margin-bottom:8px;
+    }
+    .how-desc{ font-size:.95rem; color:var(--text-dim); line-height:1.65; }
+
+    /* ─── SECTION HEADING ─── */
+    .sec-head{
+      font-family:'Cinzel',serif; font-size:.68rem; letter-spacing:5px;
+      text-transform:uppercase; color:var(--gold-core); font-weight:700;
+      margin-bottom:22px; display:flex; align-items:center; gap:14px;
+    }
+    .sec-head::after{
+      content:''; flex:1; height:1px;
+      background:linear-gradient(90deg,rgba(201,168,76,.35),transparent);
+    }
+
+    /* ─── GRID ─── */
+    .gen-grid{
+      display:grid; grid-template-columns:1fr 1fr;
+      gap:24px; margin-bottom:40px;
+    }
+    @media(max-width:720px){ .gen-grid{ grid-template-columns:1fr; } }
+
+    /* ─── PANEL ─── */
+    .panel{
+      background:var(--glass);
+      border:1px solid var(--border); border-radius:var(--radius);
+      padding:32px 28px; backdrop-filter:blur(12px);
+      position:relative; overflow:hidden;
+      box-shadow:0 10px 40px rgba(0,0,0,0.25);
+    }
+    .panel::before{
+      content:''; position:absolute; top:0; left:0; right:0; height:2px;
+      background:linear-gradient(90deg,transparent,var(--gold-core),transparent);
+    }
+    .panel-title{
+      font-family:'Cinzel',serif; font-size:.7rem; letter-spacing:4px;
+      text-transform:uppercase; color:var(--gold-light); font-weight:700;
+      margin-bottom:24px; display:flex; align-items:center; gap:10px;
+    }
+
+    /* ─── FORM ─── */
+    .form-group{ margin-bottom:18px; }
+    .form-group label{
+      display:block; font-family:'Cinzel',serif; font-size:.68rem;
+      letter-spacing:3px; text-transform:uppercase;
+      color:rgba(250,247,240,.7); font-weight:600; margin-bottom:8px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+      width:100%; background:rgba(6,14,36,0.75);
+      border:1px solid var(--border); border-radius:8px;
+      padding:12px 16px; font-family:'Cormorant Garamond',serif;
+      font-size:1.1rem; color:var(--ivory); outline:none;
+      transition:border-color var(--transition), box-shadow var(--transition);
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder{ color:rgba(250,247,240,.25); font-style:italic; }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus{
+      border-color:var(--gold-core);
+      box-shadow:0 0 0 3px rgba(201,168,76,0.12);
+    }
+    .form-group select option{ background:var(--navy-mid); color:var(--ivory); }
+    .form-group textarea{ min-height:120px; resize:vertical; line-height:1.7; }
+    .note-text{
+      font-size:.88rem; color:var(--text-dim); line-height:1.6;
+      background:rgba(201,168,76,.07); border:1px solid var(--border);
+      border-radius:8px; padding:12px 16px; margin-bottom:18px;
+    }
+    .note-text strong{ color:var(--gold-light); }
+
+    /* ─── BUTTONS ─── */
+    .btn-gen{
+      width:100%; padding:15px 24px;
+      background:linear-gradient(135deg,#B8862A,var(--gold-core),var(--gold-pale));
+      background-size:220% auto;
+      border:none; border-radius:8px;
+      font-family:'Cinzel',serif; font-size:.72rem; letter-spacing:4px;
+      text-transform:uppercase; font-weight:700;
+      color:var(--navy-deep); cursor:pointer;
+      transition:background-position .45s, transform .22s, box-shadow .3s;
+      box-shadow:0 6px 24px rgba(201,168,76,.28); margin-top:8px;
+    }
+    .btn-gen:hover{
+      background-position:right center; transform:translateY(-2px);
+      box-shadow:0 12px 36px rgba(201,168,76,.45);
+    }
+    .btn-gen:active{ transform:translateY(0); }
+
+    /* ─── OUTPUT PANEL ─── */
+    .output-panel{ grid-column:1/-1; display:none; }
+    .output-panel.show{ display:block; }
+    .out-name{
+      font-family:'Great Vibes',cursive; font-size:clamp(2rem,5vw,3.2rem);
+      color:var(--gold-pale); text-shadow:0 0 30px rgba(201,168,76,.35);
+      margin-bottom:4px; line-height:1.1;
+    }
+    .out-meta{
+      font-family:'Cinzel',serif; font-size:.6rem; letter-spacing:3.5px;
+      color:var(--text-dim); text-transform:uppercase; margin-bottom:22px;
+    }
+    .url-label{
+      font-family:'Cinzel',serif; font-size:.56rem; letter-spacing:3px;
+      color:rgba(250,247,240,.4); text-transform:uppercase; font-weight:700; margin-bottom:6px;
+    }
+    .url-box{
+      background:rgba(6,14,36,0.85); border:1px solid var(--border);
+      border-radius:8px; padding:14px 18px;
+      font-family:'Lato',sans-serif; font-size:.9rem; color:var(--gold-light);
+      word-break:break-all; line-height:1.6; margin-bottom:18px;
+      cursor:text; user-select:all; transition:border-color var(--transition);
+    }
+    .url-box:hover{ border-color:var(--border-b); }
+    .action-row{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px; }
+    .btn-action{
+      flex:1; min-width:110px; padding:11px 16px; border-radius:8px;
+      font-family:'Cinzel',serif; font-size:.58rem; letter-spacing:3px;
+      text-transform:uppercase; font-weight:700; cursor:pointer;
+      transition:all var(--transition); display:flex;
+      align-items:center; justify-content:center; gap:8px; text-decoration:none;
+      border:1px solid transparent;
+    }
+    .btn-copy{
+      background:rgba(201,168,76,.14); border-color:var(--border-b); color:var(--gold-light);
+    }
+    .btn-copy:hover{ background:rgba(201,168,76,.28); }
+    .btn-copy.ok{
+      background:rgba(50,180,80,.2); border-color:rgba(50,180,80,.5); color:#7EE87E;
+    }
+    .btn-wa{
+      background:rgba(37,211,102,.12); border-color:rgba(37,211,102,.35); color:#25D366;
+    }
+    .btn-wa:hover{ background:rgba(37,211,102,.24); }
+    .btn-prev{
+      background:rgba(201,168,76,.12); border-color:var(--border); color:var(--ivory);
+    }
+    .btn-prev:hover{ background:rgba(201,168,76,.24); }
+
+    /* ─── BATCH TABLE ─── */
+    .table-scroll{ overflow-x:auto; border-radius:var(--radius); border:1px solid var(--border); }
+    table{ width:100%; border-collapse:collapse; min-width:580px; }
+    thead tr{ background:rgba(6,14,36,0.85); }
+    th{
+      font-family:'Cinzel',serif; font-size:.58rem; letter-spacing:3px;
+      text-transform:uppercase; color:var(--gold-core); padding:13px 16px;
+      text-align:left; white-space:nowrap; font-weight:700;
+      border-bottom:1px solid var(--border);
+    }
+    td{
+      padding:12px 16px; font-size:.95rem; color:var(--text-mid);
+      border-bottom:1px solid rgba(255,255,255,.04); vertical-align:middle;
+    }
+    tr:last-child td{ border-bottom:none; }
+    tr:hover td{ background:rgba(201,168,76,.04); }
+    .td-n{ font-family:'Playfair Display',serif; font-style:italic; color:var(--gold-pale); }
+    .td-u{ font-family:'Lato',sans-serif; font-size:.78rem; color:var(--text-dim); max-width:240px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; }
+    .td-u:hover{ color:var(--gold-light); }
+    .tbl-btn{
+      padding:5px 10px; border-radius:5px;
+      font-family:'Cinzel',serif; font-size:.5rem; letter-spacing:2px;
+      text-transform:uppercase; font-weight:700; cursor:pointer;
+      display:inline-flex; align-items:center; gap:5px; margin-right:4px;
+      text-decoration:none; transition:all .2s; border:1px solid transparent;
+    }
+    .tb-cp{ background:rgba(201,168,76,.14); border-color:var(--border); color:var(--gold-light); }
+    .tb-cp:hover{ background:rgba(201,168,76,.28); }
+    .tb-cp.ok{ background:rgba(50,180,80,.2); border-color:rgba(50,180,80,.5); color:#7EE87E; }
+    .tb-wa{ background:rgba(37,211,102,.12); border-color:rgba(37,211,102,.3); color:#25D366; }
+    .tb-wa:hover{ background:rgba(37,211,102,.24); }
+    .tb-pv{ background:rgba(201,168,76,.1); border-color:var(--border); color:var(--ivory); }
+    .tb-pv:hover{ background:rgba(201,168,76,.22); }
+    .tb-dl{ background:rgba(220,60,60,.1); border-color:rgba(220,60,60,.25); color:rgba(220,80,80,.9); }
+    .tb-dl:hover{ background:rgba(220,60,60,.22); }
+
+    /* ─── TOAST ─── */
+    #toast{
+      position:fixed; bottom:32px; left:50%;
+      transform:translateX(-50%) translateY(18px);
+      background:rgba(21,35,71,.97); border:1px solid var(--gold-core);
+      border-radius:8px; padding:13px 28px;
+      font-family:'Cinzel',serif; font-size:.62rem; letter-spacing:3.5px;
+      text-transform:uppercase; color:var(--gold-pale); font-weight:700;
+      z-index:9999; opacity:0; transition:opacity .3s,transform .3s;
+      pointer-events:none; white-space:nowrap;
+      box-shadow:0 8px 30px rgba(0,0,0,0.4);
+    }
+    #toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+
+    /* ─── DIVIDER ─── */
+    .divider{
+      display:flex; align-items:center; gap:18px;
+      margin:clamp(32px,4vw,48px) 0; color:rgba(201,168,76,.4);
+    }
+    .divider::before,.divider::after{ content:''; flex:1; height:1px; background:rgba(201,168,76,.18); }
+    .divider i{ font-size:.75rem; }
+
+    /* ─── RESPONSIVE ─── */
+    @media(max-width:480px){
+      .action-row{ flex-direction:column; }
+      .btn-action{ flex:none; width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header class="page-header">
+      <span class="cross" aria-hidden="true">&#10013;</span>
+      <span class="eyebrow">Holy Matrimony &#183; 4th September 2026</span>
+      <h1>Jacob Israel &amp; Dhivya</h1>
+      <p class="sub">Personalised Invitation Link Generator</p>
+      <span class="date-tag">4 Sep 2026 &#183; Chennai</span>
+      <div class="header-rule"></div>
+    </header>
+
+    <!-- HOW IT WORKS -->
+    <div class="sec-head"><i class="fas fa-circle-info"></i> How It Works</div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">01</div>
+        <div class="how-title">Enter Guest Name</div>
+        <div class="how-desc">Type the guest&#8217;s name to create a personalised invitation link with their name displayed on the envelope.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-num">02</div>
+        <div class="how-title">Generate Link</div>
+        <div class="how-desc">Click &#8220;Generate&#8221; to create a unique URL that embeds the guest&#8217;s name. Preview before sending.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-num">03</div>
+        <div class="how-title">Share via WhatsApp</div>
+        <div class="how-desc">Send the personalised link directly via WhatsApp or copy it for any messaging platform.</div>
+      </div>
+    </div>
+
+    <div class="divider"><i class="fas fa-cross"></i></div>
+
+    <!-- GENERATOR -->
+    <div class="sec-head"><i class="fas fa-link"></i> Single Guest Generator</div>
+    <div class="gen-grid">
+
+      <!-- Input -->
+      <div class="panel">
+        <div class="panel-title"><i class="fas fa-user-pen"></i> Guest Information</div>
+        <div class="note-text">
+          <strong>Base URL:</strong> Your deployed invitation URL is auto-detected below.
+          Update it if your site is hosted elsewhere (e.g. GitHub Pages).
+        </div>
+        <div class="form-group">
+          <label for="baseUrl">Invitation Base URL</label>
+          <input type="url" id="baseUrl" placeholder="https://yourdomain.com/christiraian/index.html" />
+        </div>
+        <div class="form-group">
+          <label for="guestName">Guest Name <span style="color:rgba(220,80,80,.7);">*</span></label>
+          <input type="text" id="guestName" placeholder="e.g. Mr. &amp; Mrs. Johnson" autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="guestRelation">Relation / Group</label>
+          <select id="guestRelation">
+            <option value="">&#8212; Select &#8212;</option>
+            <option value="Family">Family</option>
+            <option value="Friend">Friend</option>
+            <option value="Church Member">Church Member</option>
+            <option value="Colleague">Colleague</option>
+            <option value="Neighbour">Neighbour</option>
+            <option value="Guest">Guest</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="customMsg">Custom WhatsApp Message (optional)</label>
+          <input type="text" id="customMsg" placeholder="Leave blank to use default message" />
+        </div>
+        <button class="btn-gen" id="genBtn" onclick="generateLink()">
+          <i class="fas fa-cross"></i> &nbsp; Generate Personalised Link
+        </button>
+      </div>
+
+      <!-- Output -->
+      <div class="panel output-panel" id="outputPanel">
+        <div class="panel-title"><i class="fas fa-envelope-open-text"></i> Generated Invitation</div>
+        <div class="out-name" id="outName">Guest Name</div>
+        <div class="out-meta" id="outMeta">Holy Matrimony &#183; 4th September 2026</div>
+        <div class="url-label">Personalised Invitation Link</div>
+        <div class="url-box" id="outUrl" onclick="copyFromBox(this)"></div>
+        <div class="action-row">
+          <button class="btn-action btn-copy" id="copyBtn" onclick="copyFromBox(document.getElementById('outUrl'))">
+            <i class="fas fa-copy"></i> Copy Link
+          </button>
+          <a class="btn-action btn-wa" id="waBtn" href="#" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a class="btn-action btn-prev" id="prevBtn" href="#" target="_blank" rel="noopener">
+            <i class="fas fa-eye"></i> Preview
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /gen-grid -->
+
+    <div class="divider"><i class="fas fa-users"></i></div>
+
+    <!-- BATCH -->
+    <div class="sec-head"><i class="fas fa-list-check"></i> Batch Guest List Generator</div>
+    <div class="panel">
+      <div class="form-group">
+        <label for="batchInput">Guest Names (one per line)</label>
+        <textarea id="batchInput" class="form-group" placeholder="Mr. &amp; Mrs. Thomas&#10;Dr. Sarah Williams&#10;Fr. Matthew Joseph&#10;Ms. Priya Fernandez&#10;..."></textarea>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px;">
+        <button class="btn-gen" style="flex:1;min-width:180px;" onclick="generateBatch()">
+          <i class="fas fa-wand-magic-sparkles"></i> &nbsp; Generate All Links
+        </button>
+        <button class="btn-action btn-copy" style="flex:none;padding:15px 24px;" onclick="copyAllUrls()">
+          <i class="fas fa-copy"></i> &nbsp; Copy All
+        </button>
+        <button class="btn-action btn-prev" style="flex:none;padding:15px 24px;" onclick="clearBatch()">
+          <i class="fas fa-trash"></i> &nbsp; Clear
+        </button>
+      </div>
+      <div class="table-scroll" id="batchTableWrap" style="display:none;">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th><i class="fas fa-user"></i> Guest Name</th>
+              <th><i class="fas fa-link"></i> Invitation URL</th>
+              <th><i class="fas fa-cog"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody id="batchBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div><!-- /wrapper -->
+
+  <script>
+    /* ── Stars ── */
+    (function(){
+      var c=document.getElementById('bgCanvas'), x=c.getContext('2d'), stars=[], W, H;
+      function resize(){ W=c.width=window.innerWidth; H=c.height=window.innerHeight; mk(); }
+      function mk(){
+        stars=[];
+        var n=Math.floor((W*H)/6000);
+        for(var i=0;i<n;i++){
+          stars.push({ x:Math.random()*W, y:Math.random()*H, r:Math.random()*1.4+.3,
+            sp:.002+Math.random()*.008, ph:Math.random()*Math.PI*2,
+            w:Math.random()>.8 });
+        }
+      }
+      function draw(t){
+        x.clearRect(0,0,W,H);
+        stars.forEach(function(s){
+          var a=(.25+.75*Math.abs(Math.sin(t*s.sp+s.ph)))*.72;
+          x.beginPath(); x.arc(s.x,s.y,s.r,0,Math.PI*2);
+          x.fillStyle=s.w?'rgba(255,255,255,'+a+')':'rgba(201,168,76,'+a+')';
+          x.fill();
+        });
+        requestAnimationFrame(draw);
+      }
+      window.addEventListener('resize',resize,{passive:true}); resize(); requestAnimationFrame(draw);
+    })();
+
+    /* ── Toast ── */
+    function toast(msg){
+      var t=document.getElementById('toast'); t.textContent=msg;
+      t.classList.add('show');
+      setTimeout(function(){ t.classList.remove('show'); },2400);
+    }
+
+    /* ── Helpers ── */
+    function getBase(){
+      var u=document.getElementById('baseUrl').value.trim();
+      return u.replace(/\/$/,'');
+    }
+    function makeUrl(name){ return getBase()+'?to='+encodeURIComponent(name); }
+
+    function makeWAText(name, url){
+      var custom=document.getElementById('customMsg').value.trim();
+      if(custom) return encodeURIComponent(custom+'\n'+url);
+      return encodeURIComponent(
+        '\u271d Dear '+name+',\n\n'+
+        'With hearts full of gratitude to God, we joyfully invite you to the\n'+
+        '*Holy Matrimony of*\n\n'+
+        '*J. Jacob Israel & N.S. Dhivya*\n\n'+
+        '\ud83d\udcc5 *Friday, 4th September 2026*\n\n'+
+        '\u26ea *Ceremony* \u2013 4:00 PM to 5:30 PM\n'+
+        '   Votive Shrine of the Immaculate Heart of Mary\n'+
+        '   63, Halls Road, Kilpauk, Chennai \u2013 600 010\n\n'+
+        '\ud83e\udd42 *Reception* \u2013 7:00 PM Onwards\n'+
+        '   CSI Lite Auditorium, Kellys, Chennai\n\n'+
+        '\ud83d\udd17 Your personalised invitation:\n'+url+'\n\n'+
+        '\u271d \u201cThis is the Lord\u2019s doing, it is marvellous in our eyes.\u201d \u2014 Psalms 118:23'
+      );
+    }
+
+    /* ── Generate Single ── */
+    function generateLink(){
+      var name=document.getElementById('guestName').value.trim();
+      if(!name){ toast('Please enter a guest name'); return; }
+      var rel=document.getElementById('guestRelation').value;
+      var url=makeUrl(name);
+      document.getElementById('outName').textContent=name;
+      document.getElementById('outMeta').textContent=(rel?rel+' \u00b7 ':'')+' Holy Matrimony \u00b7 4th September 2026';
+      document.getElementById('outUrl').textContent=url;
+      document.getElementById('outUrl').title=url;
+      document.getElementById('prevBtn').href=url;
+      document.getElementById('waBtn').href='https://wa.me/?text='+makeWAText(name,url);
+      var op=document.getElementById('outputPanel');
+      op.classList.add('show');
+      op.scrollIntoView({behavior:'smooth',block:'nearest'});
+    }
+
+    /* ── Copy ── */
+    function copyText(text, btn){
+      navigator.clipboard.writeText(text).then(function(){
+        toast('Link copied to clipboard!');
+        if(btn){ btn.classList.add('ok'); var old=btn.innerHTML; btn.innerHTML='<i class="fas fa-check"></i> Copied!';
+          setTimeout(function(){ btn.classList.remove('ok'); btn.innerHTML=old; },2200); }
+      }).catch(function(){
+        var ta=document.createElement('textarea'); ta.value=text;
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+        document.body.removeChild(ta); toast('Copied!');
+      });
+    }
+    function copyFromBox(el){
+      var url=el.textContent.trim(); if(!url) return;
+      var btn=document.getElementById('copyBtn');
+      copyText(url, btn);
+    }
+
+    /* ── Batch ── */
+    function generateBatch(){
+      var raw=document.getElementById('batchInput').value.trim();
+      if(!raw){ toast('Enter at least one guest name'); return; }
+      var names=raw.split('\n').map(function(n){ return n.trim(); }).filter(function(n){ return n; });
+      var tbody=document.getElementById('batchBody');
+      tbody.innerHTML='';
+      names.forEach(function(name,i){
+        var url=makeUrl(name);
+        var waHref='https://wa.me/?text='+makeWAText(name,url);
+        var tr=document.createElement('tr');
+        tr.innerHTML=
+          '<td style="color:rgba(201,168,76,.5);font-family:Cinzel,serif;font-size:.68rem;">'+(i+1)+'</td>'+
+          '<td class="td-n">'+escHtml(name)+'</td>'+
+          '<td class="td-u" title="'+escAttr(url)+'" onclick="copyText(\''+escAttr(url)+'\',null)">'+escHtml(url)+'</td>'+
+          '<td style="white-space:nowrap;">'+
+            '<button class="tbl-btn tb-cp" onclick="copyText(\''+escAttr(url)+'\',this)"><i class="fas fa-copy"></i></button>'+
+            '<a class="tbl-btn tb-wa" href="'+escAttr(waHref)+'" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>'+
+            '<a class="tbl-btn tb-pv" href="'+escAttr(url)+'" target="_blank" rel="noopener"><i class="fas fa-eye"></i></a>'+
+            '<button class="tbl-btn tb-dl" onclick="this.closest(\'tr\').remove();toast(\'Removed\')"><i class="fas fa-trash"></i></button>'+
+          '</td>';
+        tbody.appendChild(tr);
+      });
+      document.getElementById('batchTableWrap').style.display='block';
+      toast(names.length+' links generated!');
+    }
+
+    function copyAllUrls(){
+      var rows=document.querySelectorAll('#batchBody tr'); if(!rows.length){ toast('Generate links first'); return; }
+      var lines=[];
+      rows.forEach(function(r){
+        var n=r.querySelector('.td-n'), u=r.querySelector('.td-u');
+        if(n&&u) lines.push(n.textContent.trim()+': '+u.title);
+      });
+      copyText(lines.join('\n'), null);
+    }
+
+    function clearBatch(){
+      document.getElementById('batchBody').innerHTML='';
+      document.getElementById('batchTableWrap').style.display='none';
+      document.getElementById('batchInput').value='';
+      toast('Cleared!');
+    }
+
+    function escHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+    function escAttr(s){ return s.replace(/'/g,'&#39;').replace(/"/g,'&quot;'); }
+
+    /* ── Auto-detect base URL ── */
+    (function(){
+      var base=window.location.origin+window.location.pathname.replace('invite-generator.html','index.html');
+      document.getElementById('baseUrl').value=base;
+    })();
+  </script>
+</body>
+</html>"""
+
+with open("invite-generator.html", "w", encoding="utf-8") as f:
+    f.write(html)
+print("Enterprise invite-generator.html written! Size:", len(html))
