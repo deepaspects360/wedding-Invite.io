@@ -1185,8 +1185,8 @@ function copyGift(btn,text){
 
   <span class="footer-cross" aria-hidden="true">&#10013;</span>
   <div class="footer-names">
-    <span data-lang="en">Jacob Israel &amp; Dhiya</span>
-    <span data-lang="ta" style="font-family:'Cormorant Garamond',serif;font-style:italic;">\u0b9c\u0bc7\u0b95\u0bcd\u0b95\u0baa\u0bcd \u0b87\u0bb8\u0bcd\u0bb0\u0bc7\u0bb2\u0bcd &amp; \u0ba4\u0bbf\u0baf\u0bbe</span>
+    <span data-lang="en">Jacob Israel <br class="mobile-break" />&amp;<br class="mobile-break" /> Dhiya</span>
+    <span data-lang="ta" style="font-family:'Cormorant Garamond',serif;font-style:italic;">ஜேக்கப் இஸ்ரேல் <br class="mobile-break" />&amp;<br class="mobile-break" /> தியா</span>
   </div>
   <div class="footer-date">
     <span data-lang="en">Friday &middot; 4th September 2026 &middot; Chennai</span>
