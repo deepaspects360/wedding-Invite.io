@@ -147,10 +147,10 @@ section{position:relative;overflow:hidden;}
 .cd-eyebrow{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:12px;}
 .cd-bar{width:clamp(40px,10vw,110px);height:1px;background:linear-gradient(90deg,transparent,var(--silver-dark),transparent);}
 .cd-label{font-family:'Cinzel',serif;font-size:0.63rem;letter-spacing:6px;text-transform:uppercase;color:var(--text-light);margin-bottom:clamp(24px,4.5vh,40px);font-weight:700;}
-.cd-grid{display:flex;gap:clamp(10px,2.5vw,24px);justify-content:center;flex-wrap:wrap;max-width:680px;margin:0 auto;}
-.cd-card{flex:1;min-width:clamp(72px,15vw,115px);max-width:130px;background:var(--white);border:1px solid rgba(212,175,55,0.28);border-radius:8px;padding:clamp(16px,3vw,26px) 8px;box-shadow:0 6px 24px rgba(0,0,0,0.04);transition:transform var(--trans);}
+.cd-grid{display:flex;gap:clamp(6px,1.5vw,24px);justify-content:center;flex-wrap:nowrap;max-width:680px;margin:0 auto;width:100%;}
+.cd-card{flex:1;min-width:0;max-width:130px;background:var(--white);border:1px solid rgba(212,175,55,0.28);border-radius:8px;padding:clamp(12px,2vw,26px) clamp(2px,1vw,8px);box-shadow:0 6px 24px rgba(0,0,0,0.04);transition:transform var(--trans);}
 .cd-card:hover{transform:translateY(-3px);}
-.cd-num{font-family:'Cinzel',serif;font-size:clamp(1.8rem,4.2vw,2.6rem);font-weight:600;color:var(--gold-dark);line-height:1;display:block;margin-bottom:8px;}
+.cd-num{font-family:'Cinzel',serif;font-size:clamp(1.4rem,4.2vw,2.6rem);font-weight:600;color:var(--gold-dark);line-height:1;display:block;margin-bottom:8px;}
 .cd-unit{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:3px;text-transform:uppercase;color:var(--text-light);font-weight:700;}
 
 /* INVITATION */
