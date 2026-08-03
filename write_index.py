@@ -1,6 +1,6 @@
 
 # Generates the complete enterprise Christian Wedding Invitation
-# Jacob Israel & Dhivya — 4th September 2026
+# Jacob Israel & Dhiya — 4th September 2026
 # ALL FAMILY NAMES in Tamil + English from invitation cards
 
 HTML = """<!DOCTYPE html>
@@ -8,31 +8,31 @@ HTML = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5"/>
-  <title>Jacob Israel & Dhivya \u2014 Holy Matrimony \u00b7 4 September 2026</title>
-  <meta name="description" content="Holy Matrimony of J. Jacob Israel & N.S. Dhivya on Friday 4th September 2026 at Votive Shrine of the Immaculate Heart of Mary, Kilpauk, Chennai."/>
+  <title>Jacob Israel & Dhiya \u2014 Holy Matrimony \u00b7 4 September 2026</title>
+  <meta name="description" content="Holy Matrimony of J. Jacob Israel & N.S. Dhiya on Friday 4th September 2026 at Votive Shrine of the Immaculate Heart of Mary, Kilpauk, Chennai."/>
   
   <!-- Open Graph / Facebook Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://weding-invite.netlify.app/christian/index.html">
-  <meta property="og:site_name" content="Jacob Israel & Dhivya — Holy Matrimony">
+  <meta property="og:site_name" content="Jacob Israel & Dhiya — Holy Matrimony">
   <meta property="og:locale" content="en_IN">
-  <meta property="og:title" content="Jacob Israel & Dhivya — Holy Matrimony">
-  <meta property="og:description" content="You are joyfully invited to the Holy Matrimony of J. Jacob Israel & N.S. Dhivya on Friday 4th September 2026. Join us in our joyous celebration.">
+  <meta property="og:title" content="Jacob Israel & Dhiya — Holy Matrimony">
+  <meta property="og:description" content="You are joyfully invited to the Holy Matrimony of J. Jacob Israel & N.S. Dhiya on Friday 4th September 2026. Join us in our joyous celebration.">
   <meta property="og:image" content="https://deepaspects360.github.io/wedding-Invite.io/assets/church_painting_preview.jpg">
   <meta property="og:image:secure_url" content="https://deepaspects360.github.io/wedding-Invite.io/assets/church_painting_preview.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Jacob Israel & Dhivya Wedding Invitation — Holy Matrimony 4th September 2026">
+  <meta property="og:image:alt" content="Jacob Israel & Dhiya Wedding Invitation — Holy Matrimony 4th September 2026">
 
   <!-- Twitter / WhatsApp Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@jacobdhivya2026">
+  <meta name="twitter:site" content="@jacobDhiya2026">
   <meta name="twitter:url" content="https://weding-invite.netlify.app/christian/index.html">
-  <meta name="twitter:title" content="Jacob Israel & Dhivya — Holy Matrimony">
-  <meta name="twitter:description" content="You are joyfully invited to the Holy Matrimony of J. Jacob Israel & N.S. Dhivya on Friday 4th September 2026. Join us in our joyous celebration.">
+  <meta name="twitter:title" content="Jacob Israel & Dhiya — Holy Matrimony">
+  <meta name="twitter:description" content="You are joyfully invited to the Holy Matrimony of J. Jacob Israel & N.S. Dhiya on Friday 4th September 2026. Join us in our joyous celebration.">
   <meta name="twitter:image" content="https://deepaspects360.github.io/wedding-Invite.io/assets/church_painting_preview.jpg">
-  <meta name="twitter:image:alt" content="Jacob Israel & Dhivya Wedding Invitation">
+  <meta name="twitter:image:alt" content="Jacob Israel & Dhiya Wedding Invitation">
 
   <meta name="theme-color" content="#FBF8F1"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -415,7 +415,7 @@ body.lang-ta .cd-card { padding: clamp(12px, 2vw, 18px) 4px; }
     </span>
     <span class="hero-amp rv d3">&amp;</span>
     <span class="hero-name rv d3">
-      <span data-lang="en">N.S. Dhivya</span>
+      <span data-lang="en">N.S. Dhiya</span>
       <span data-lang="ta" style="font-family:'Cormorant Garamond',serif;font-style:italic;">\u0b8e\u0ba9\u0bcd.\u0b9a\u0bbf. \u0ba4\u0bbf\u0baf\u0bbe</span>
     </span>
     <div class="hero-dateline rv d4"></div>
@@ -478,7 +478,7 @@ body.lang-ta .cd-card { padding: clamp(12px, 2vw, 18px) 4px; }
     <span class="inv-qual rv d4">B.E., PGDM &nbsp;&middot;&nbsp; IT &ndash; Infrastructure &amp; Security Management</span>
     <span class="inv-amp rv d4">&amp;</span>
     <span class="inv-couple rv d4">
-      <span data-lang="en">N.S. Dhivya</span>
+      <span data-lang="en">N.S. Dhiya</span>
       <span data-lang="ta">\u0ba4\u0bbf\u0bb0\u0bc1\u0ba8\u0bbf\u0bb1\u0bc8\u0b9a\u0bc6\u0bb2\u0bcd\u0bb5\u0bbf \u0b8e\u0ba9\u0bcd.\u0b9a\u0bbf. \u0ba4\u0bbf\u0baf\u0bbe</span>
     </span>
     <span class="inv-qual rv d4">B.E., PGDM &nbsp;&middot;&nbsp; IT &ndash; Infrastructure &amp; Security Management</span>
@@ -1054,7 +1054,7 @@ body.lang-ta .cd-card { padding: clamp(12px, 2vw, 18px) 4px; }
         <span data-lang="ta">\u0bb5\u0b99\u0bcd\u0b95\u0bbf \u0baa\u0bb0\u0bbf\u0bae\u0bbe\u0bb1\u0bcd\u0bb1\u0bae\u0bcd</span>
       </div>
       <div class="gift-card-name">
-        <span data-lang="en">N.S. Dhivya</span>
+        <span data-lang="en">N.S. Dhiya</span>
         <span data-lang="ta" style="font-family:'Cormorant Garamond',serif;font-style:italic;">\u0b8e\u0ba9\u0bcd.\u0b9a\u0bbf. \u0ba4\u0bbf\u0baf\u0bbe</span>
       </div>
       <div class="gift-field">
@@ -1183,7 +1183,7 @@ function copyGift(btn,text){
 
   <span class="footer-cross" aria-hidden="true">&#10013;</span>
   <div class="footer-names">
-    <span data-lang="en">Jacob Israel &amp; Dhivya</span>
+    <span data-lang="en">Jacob Israel &amp; Dhiya</span>
     <span data-lang="ta" style="font-family:'Cormorant Garamond',serif;font-style:italic;">\u0b9c\u0bc7\u0b95\u0bcd\u0b95\u0baa\u0bcd \u0b87\u0bb8\u0bcd\u0bb0\u0bc7\u0bb2\u0bcd &amp; \u0ba4\u0bbf\u0baf\u0bbe</span>
   </div>
   <div class="footer-date">

@@ -38,7 +38,7 @@ gifts_en = """<section id="gifts" class="gifts-section rv">
     <div class="gift-card rv d2">
       <span class="gift-card-icon"><i class="fas fa-university"></i></span>
       <div class="gift-card-type">Bank Transfer</div>
-      <div class="gift-card-name">N.S. Dhivya</div>
+      <div class="gift-card-name">N.S. Dhiya</div>
       <div class="gift-field">
         <div class="gift-field-label">Bank Name</div>
         <div class="gift-field-value">XXXX Bank &mdash; Placeholder</div>
@@ -160,7 +160,7 @@ gifts_ta = """<section id="gifts" class="gifts-section rv">
         <span data-lang="ta">\\u0bb5\\u0b99\\u0bcd\\u0b95\\u0bbf \\u0baa\\u0bb0\\u0bbf\\u0bae\\u0bbe\\u0bb1\\u0bcd\\u0bb1\\u0bae\\u0bcd</span>
       </div>
       <div class="gift-card-name">
-        <span data-lang="en">N.S. Dhivya</span>
+        <span data-lang="en">N.S. Dhiya</span>
         <span data-lang="ta" style="font-family:'Cormorant Garamond',serif;font-style:italic;">\\u0b8e\\u0ba9\\u0bcd.\\u0b9a\\u0bbf. \\u0ba4\\u0bbf\\u0baf\\u0bbe</span>
       </div>
       <div class="gift-field">
