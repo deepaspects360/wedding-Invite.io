@@ -163,6 +163,8 @@ section{position:relative;overflow:hidden;}
 .inv-qual{font-family:'Cinzel',serif;font-size:clamp(0.58rem,1.3vw,0.72rem);letter-spacing:2px;text-transform:uppercase;color:var(--text-light);display:block;margin-top:7px;font-weight:600;}
 .inv-amp{font-family:'Great Vibes',cursive;font-size:clamp(1.5rem,3vw,2rem);color:var(--gold);display:block;margin:clamp(12px,2vh,20px) 0;}
 .inv-parent-note{font-family:'Cinzel',serif;font-size:clamp(0.55rem,1.2vw,0.65rem);letter-spacing:2px;color:var(--text-light);display:block;margin-top:12px;text-transform:uppercase;}
+@media(min-width: 601px) { .mobile-break { display: none; } }
+@media(max-width: 600px) { .mobile-break { display: block; } }
 .blessing-card{max-width:800px;margin:clamp(36px,6vh,56px) auto 0;background:var(--white);border:1px solid rgba(192,192,192,0.4);border-radius:12px;padding:clamp(34px,5vw,56px) clamp(26px,4.5vw,52px);text-align:justify;position:relative;box-shadow:0 10px 40px rgba(0,0,0,0.03);}
 .blessing-card::before{content:'\u2721';font-size:2rem;color:var(--gold);position:absolute;top:-20px;left:50%;transform:translateX(-50%);background:var(--sandle-light);padding:0 16px;}
 .blessing-para{font-size:clamp(1.02rem,2.1vw,1.18rem);line-height:1.9;color:var(--text-mid);font-style:italic;margin-bottom:1.4em;text-indent:2em;}
@@ -463,29 +465,29 @@ body.lang-ta .cd-card { padding: clamp(12px, 2vw, 18px) 4px; }
     </p>
     <blockquote class="inv-verse rv d2">
       <div data-lang="en">&#8220;This is the Lord&#8217;s doing, it is marvellous in our eyes.&#8221;</div>
-      <div data-lang="ta" style="font-style:italic;">&#8220;\u0b86\u0ba3\u0bcd\u0b9f\u0bb5\u0bb0\u0bbe\u0bb2\u0bcd \u0b87\u0ba4\u0bc1 \u0ba8\u0bbf\u0b95\u0bb4\u0bcd\u0ba4\u0bcd\u0ba4\u0bc1\u0bb3\u0bcd\u0bb3\u0ba4\u0bc1, \u0ba8\u0bae\u0bcd \u0b95\u0ba3\u0bcd\u0b95\u0bb3\u0bc1\u0b95\u0bcd\u0b95\u0bc1 \u0b87\u0ba4\u0bc1 \u0bb5\u0bbf\u0baf\u0baa\u0bcd\u0baa\u0bbe\u0baf\u0bbf\u0bb0\u0bc1\u0b95\u0bcd\u0b95\u0bbf\u0bb1\u0ba4\u0bc1.&#8221;</div>
+      <div data-lang="ta" style="font-style:italic;">&#8220;ஆண்டவரால் இது நிகழ்த்துள்ளது, நம் கண்களுக்கு இது வியப்பாயிருக்கிறது.&#8221;</div>
       <cite>&#8212; Psalms 118 : 23</cite>
     </blockquote>
     <div class="gold-rule rv d2"></div>
     <div class="inv-formal rv d3">
-      <div data-lang="en">With hearts full of gratitude to God,<br/><span class="host">Mr. D. John Fernandez &amp; Mrs. J. Arunmozhi</span><br/>request the honour of your presence with family<br/>at the holy matrimony of their beloved son</div>
-      <div data-lang="ta">\u0b87\u0bb1\u0bc8\u0bb5\u0ba9\u0bc1\u0b95\u0bcd\u0b95\u0bc1 \u0ba8\u0ba9\u0bcd\u0bb1\u0bbf\u0baf\u0bc1\u0b9f\u0ba9\u0bcd,<br/><span class="host">\u0ba4\u0bbf\u0bb0\u0bc1. D. \u0b9c\u0bbe\u0ba9\u0bcd \u0baa\u0bc6\u0bb0\u0bcd\u0ba9\u0bbe\u0ba3\u0bcd\u0b9f\u0bb8\u0bcd &amp; \u0ba4\u0bbf\u0bb0\u0bc1\u0bae\u0ba4\u0bbf. J. \u0b85\u0bb0\u0bc1\u0ba3\u0bcd\u0bae\u0bca\u0bb4\u0bbf</span><br/>\u0ba4\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0b85\u0ba9\u0bcd\u0baa\u0bc1 \u0bae\u0b95\u0ba9\u0bbf\u0ba9\u0bcd \u0ba4\u0bbf\u0bb0\u0bc1\u0bae\u0ba3\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bcd \u0ba4\u0b99\u0bcd\u0b95\u0bb3\u0bc8 \u0b85\u0bb4\u0bc8\u0b95\u0bcd\u0b95\u0bbf\u0ba9\u0bcd\u0bb1\u0bcb\u0bae\u0bcd</div>
+      <div data-lang="en">With hearts full of gratitude to God,<br/><span class="host">Mr. D. John Fernandez &amp;<br class="mobile-break" /> Mrs. J. Arunmozhi</span><br/>request the honour of your presence with family<br/>at the holy matrimony of their beloved son</div>
+      <div data-lang="ta">இறைவனுக்கு நன்றியுடன்,<br/><span class="host">திரு. D. ஜான் பெர்னாண்டஸ் &amp;<br class="mobile-break" /> திருமதி. J. அருண்மொழி</span><br/>தங்கள் அன்பு மகனின் திருமணத்தில் தங்களை அழைக்கின்றோம்</div>
     </div>
     <span class="inv-couple rv d4">
       <span data-lang="en">J. Jacob Israel</span>
-      <span data-lang="ta">\u0ba4\u0bbf\u0bb0\u0bc1\u0bb5\u0bbe\u0bb3\u0bb0\u0bcd\u0b9a\u0bc6\u0bb2\u0bcd\u0bb5\u0ba9\u0bcd \u0b9c\u0bbe. \u0b9c\u0bc7\u0b95\u0bcd\u0b95\u0baa\u0bcd \u0b87\u0bb8\u0bcd\u0bb0\u0bc7\u0bb2\u0bcd</span>
+      <span data-lang="ta">திருவாளர்செல்வன் ஜா. ஜேக்கப் இஸ்ரேல்</span>
     </span>
     <span class="inv-qual rv d4">B.E., PGDM &nbsp;&middot;&nbsp; IT &ndash; Infrastructure &amp; Security Management</span>
     <span class="inv-amp rv d4">&amp;</span>
     <span class="inv-couple rv d4">
       <span data-lang="en">N.S. Dhiya</span>
-      <span data-lang="ta">\u0ba4\u0bbf\u0bb0\u0bc1\u0ba8\u0bbf\u0bb1\u0bc8\u0b9a\u0bc6\u0bb2\u0bcd\u0bb5\u0bbf \u0b8e\u0ba9\u0bcd.\u0b9a\u0bbf. \u0ba4\u0bbf\u0baf\u0bbe</span>
+      <span data-lang="ta">திருநிறைசெல்வி என்.சி. தியா</span>
     </span>
     <span class="inv-qual rv d4">B.E., PGDM &nbsp;&middot;&nbsp; IT &ndash; Infrastructure &amp; Security Management</span>
-    <span class="inv-parent-note rv d4">
-      <span data-lang="en">(Daughter of Mr. N.V. Shiva Das &amp; Mrs. Kunjumol Das)</span>
-      <span data-lang="ta">(\u0ba4\u0bbf\u0bb0\u0bc1. N.V. \u0b9a\u0bbf\u0bb5\u0bbe \u0ba4\u0bbe\u0bb8\u0bcd &amp; \u0ba4\u0bbf\u0bb0\u0bc1\u0bae\u0ba4\u0bbf. \u0b95\u0bc1\u0b9e\u0bcd\u0b9a\u0bc1\u0bae\u0bcb\u0bb2\u0bcd \u0ba4\u0bbe\u0bb8\u0bcd \u0b86\u0b95\u0bbf\u0baf\u0bcb\u0bb0\u0bbf\u0ba9\u0bcd \u0bae\u0b95\u0bb3\u0bcd)</span>
-    </span>
+    <div class="inv-formal rv d4" style="margin-top: 15px; margin-bottom: 0; line-height: 1.6;">
+      <span class="host" data-lang="en">(Daughter of Mr. N.V. Shiva Das &amp;<br class="mobile-break" /> Mrs. Kunjumol Das)</span>
+      <span class="host" data-lang="ta">(திரு. N.V. சிவா தாஸ் &amp;<br class="mobile-break" /> திருமதி. குஞ்சுமால் தாஸ் ஆகியோரின் மகள்)</span>
+    </div>
     <div class="blessing-card rv">
       <p class="blessing-para" data-lang="en">For our family, the Church since 1980 has always been our spiritual home and a constant source of wisdom, guidance and inspiration. Our journey began in Church School, where we received the values, enlightenment and foundation that helped us to shape our education, career and lives. The Church has remained an integral part of our family&#8217;s journey and growth.</p>
       <p class="blessing-para" data-lang="ta">எங்கள் குடும்பத்திற்கு, 1980 ஆம் ஆண்டு முதல் திருச்சபை எப்போதும் எங்கள் ஆன்மீக இல்லமாகவும், ஞானம், வழிகாட்டுதல் மற்றும் உத்வேகத்தின் ஆதாரமாகவும் இருந்து வருகிறது. எங்கள் பயணம் திருச்சபை பள்ளியில் தொடங்கியது, அங்கு எங்கள் கல்வி, தொழில் மற்றும் வாழ்க்கையை வடிவமைக்க உதவிய மதிப்புகள், அறிவொளி மற்றும் அடித்தளத்தை நாங்கள் பெற்றோம். திருச்சபை எங்கள் குடும்பத்தின் பயணத்திலும் வளர்ச்சியிலும் ஒரு ஒருங்கிணைந்த பகுதியாக இருந்து வருகிறது.</p>
