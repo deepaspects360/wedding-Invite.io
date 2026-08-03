@@ -134,7 +134,7 @@ section{position:relative;overflow:hidden;}
 .cross-deco{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:clamp(22px,4vh,38px);}
 .cross-line{height:1px;width:clamp(50px,12vw,140px);background:linear-gradient(90deg,transparent,rgba(255,255,255,0.85),transparent);}
 .hero-inscription{font-family:'Cinzel',serif;font-size:clamp(0.55rem,1.3vw,0.72rem);letter-spacing:clamp(3px,1vw,6px);line-height:1.6;max-width:90%;margin:0 auto clamp(14px,3vh,26px);text-transform:uppercase;color:rgba(255,255,255,0.9);font-weight:600;}
-.hero-name{font-family:'Playfair Display',serif;font-style:italic;color:#fff;display:block;line-height:1.0;text-shadow:0 4px 20px rgba(0,0,0,0.4);font-size:clamp(2.8rem,7.5vw,5.5rem);}
+.hero-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-style:normal;color:#fff;display:block;line-height:1.05;text-shadow:0 4px 20px rgba(0,0,0,0.4);font-size:clamp(2.8rem,7.5vw,5.5rem);letter-spacing:1px;}
 .hero-amp{font-family:'Great Vibes',cursive;font-size:clamp(2rem,4.5vw,3.5rem);color:var(--gold-light);display:block;margin:clamp(4px,1vh,10px) 0;text-shadow:0 2px 10px rgba(0,0,0,0.3);}
 .hero-date{font-family:'Cinzel',serif;font-size:clamp(0.65rem,1.6vw,0.85rem);letter-spacing:5px;color:#fff;margin-top:clamp(18px,3.5vh,32px);display:block;text-transform:uppercase;font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.4);}
 .hero-dateline{width:clamp(60px,14vw,160px);height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:12px auto;}
@@ -159,7 +159,7 @@ section{position:relative;overflow:hidden;}
 .inv-verse cite{display:block;margin-top:12px;font-style:normal;font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:4px;color:var(--silver-dark);font-weight:700;text-transform:uppercase;}
 .inv-formal{font-size:clamp(1.05rem,2.2vw,1.25rem);color:var(--text-dark);line-height:2.0;margin-bottom:clamp(22px,4vh,38px);}
 .inv-formal .host{color:var(--gold-dark);font-weight:600;font-size:1.1em;}
-.inv-couple{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(2.2rem,5vw,3.5rem);color:var(--text-dark);display:block;line-height:1.1;margin:6px 0;}
+.inv-couple{font-family:'Cormorant Garamond',serif;font-weight:700;font-style:normal;font-size:clamp(2.4rem,5.5vw,3.8rem);color:var(--text-dark);display:block;line-height:1.1;margin:6px 0;letter-spacing:0.5px;}
 .inv-qual{font-family:'Cinzel',serif;font-size:clamp(0.58rem,1.3vw,0.72rem);letter-spacing:2px;text-transform:uppercase;color:var(--text-light);display:block;margin-top:7px;font-weight:600;}
 .inv-amp{font-family:'Great Vibes',cursive;font-size:clamp(1.5rem,3vw,2rem);color:var(--gold);display:block;margin:clamp(12px,2vh,20px) 0;}
 .inv-parent-note{font-family:'Cinzel',serif;font-size:clamp(0.55rem,1.2vw,0.65rem);letter-spacing:2px;color:var(--text-light);display:block;margin-top:12px;text-transform:uppercase;}
