@@ -13,17 +13,26 @@ HTML = """<!DOCTYPE html>
   
   <!-- Open Graph / Facebook Meta Tags -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://8x716t6t-5500.inc1.devtunnels.ms/christian/index.html">
+  <meta property="og:url" content="https://weding-invite.netlify.app/christian/index.html">
+  <meta property="og:site_name" content="Jacob Israel & Dhivya — Holy Matrimony">
+  <meta property="og:locale" content="en_IN">
   <meta property="og:title" content="Jacob Israel & Dhivya — Holy Matrimony">
   <meta property="og:description" content="You are joyfully invited to the Holy Matrimony of J. Jacob Israel & N.S. Dhivya on Friday 4th September 2026. Join us in our joyous celebration.">
-  <meta property="og:image" content="https://8x716t6t-5500.inc1.devtunnels.ms/christian/assets/church_painting.png">
-  
-  <!-- Twitter Meta Tags -->
+  <meta property="og:image" content="https://deepaspects360.github.io/wedding-Invite.io/assets/church_painting_preview.jpg">
+  <meta property="og:image:secure_url" content="https://deepaspects360.github.io/wedding-Invite.io/assets/church_painting_preview.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jacob Israel & Dhivya Wedding Invitation — Holy Matrimony 4th September 2026">
+
+  <!-- Twitter / WhatsApp Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://8x716t6t-5500.inc1.devtunnels.ms/christian/index.html">
+  <meta name="twitter:site" content="@jacobdhivya2026">
+  <meta name="twitter:url" content="https://weding-invite.netlify.app/christian/index.html">
   <meta name="twitter:title" content="Jacob Israel & Dhivya — Holy Matrimony">
   <meta name="twitter:description" content="You are joyfully invited to the Holy Matrimony of J. Jacob Israel & N.S. Dhivya on Friday 4th September 2026. Join us in our joyous celebration.">
-  <meta name="twitter:image" content="https://8x716t6t-5500.inc1.devtunnels.ms/christian/assets/church_painting.png">
+  <meta name="twitter:image" content="https://deepaspects360.github.io/wedding-Invite.io/assets/church_painting_preview.jpg">
+  <meta name="twitter:image:alt" content="Jacob Israel & Dhivya Wedding Invitation">
 
   <meta name="theme-color" content="#FBF8F1"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -1267,6 +1276,7 @@ function getNextScrollTarget() {
 }
 
 function startAutoScroll() {
+  return; // Disabled for now
   if (autoScrollActive) return;
   autoScrollActive = true;
   interruptionEnabled = true;
@@ -1470,6 +1480,7 @@ window.addEventListener('touchstart', handleFI, {once:true});
     }
 
     function startAutoScroll() {
+      return; // Disabled for now
       if (autoScrollActive) return;
       autoScrollActive = true;
       interruptionEnabled = true;
